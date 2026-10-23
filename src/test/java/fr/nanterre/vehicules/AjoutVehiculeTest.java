@@ -12,6 +12,6 @@ public class AjoutVehiculeTest {
         parc.ajouter(v);
         
         // Échec volontaire pour le test Jenkins : on attend 2 au lieu de 1
-        assertEquals(2, parc.size());
+        assertEquals(1, parc.size());
     }
 }
