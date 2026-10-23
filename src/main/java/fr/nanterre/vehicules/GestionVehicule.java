@@ -19,5 +19,20 @@ public class GestionVehicule {
             System.out.println("  " + v);
         }
     }
-}
+        public boolean ajouterVehicule(Vehicule nouveauVehicule) {
+        // 1. Vérifier si un véhicule avec la même immatriculation existe déjà
+        for (Vehicule v : parc) {
+            if (v.getImmatriculation().equalsIgnoreCase(nouveauVehicule.getImmatriculation())) {
+                return false; // Doublon détecté, on refuse l'ajout
+            }
+        }
+        // 2. Si pas de doublon, on l'ajoute
+        parc.add(nouveauVehicule);
+        return true;
+    }
+       public List<Vehicule> getParc() {
+        return parc;
+    }
+
+}  
 
