@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GestionVehicule {
     static final String VERSION = "0.1.0";
-
+    private List<Vehicule> parc = new ArrayList<>();
     public static void main(String[] args) {
         System.out.println("Gestion de véhicules - v" + VERSION);
         List<Vehicule> parc = new ArrayList<>();
