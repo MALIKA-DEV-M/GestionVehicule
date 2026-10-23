@@ -5,13 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AjoutVehiculeTest {
 
-    @Test
-    public void ajoutAugmenteLeParc() {
+    public void testAjoutEtDoublon() {
         GestionVehicule parc = new GestionVehicule();
-        Vehicule v = new Vehicule("Peugeot", "208");
-        parc.ajouter(v);
-        
-        // Échec volontaire pour le test Jenkins : on attend 2 au lieu de 1
-        assertEquals(1, parc.size());
+        Vehicule v1 = new Vehicule("AB-123-CD", "Peugeot", "208", 2022);
+        Vehicule v2 = new Vehicule("AB-123-CD", "Renault", "Clio", 2021);
+
+        assertTrue(parc.ajouterVehicule(v1));
+        assertFalse(parc.ajouterVehicule(v2));
+        assertEquals(1, parc.getParc().size());
+    
     }
 }
