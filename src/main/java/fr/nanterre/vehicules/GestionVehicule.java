@@ -11,6 +11,7 @@ public class GestionVehicule {
         List<Vehicule> parc = new ArrayList<>();
         parc.add(new Vehicule("AB-123-CD", "Renault", "Clio", 2021));
         afficher(parc);
+        System.out.println("Mise a jour fonctionnelle v2");
     }
 
     static void afficher(List<Vehicule> parc) {
